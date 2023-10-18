@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+</head>
+
+<body>
+    <script>
+        console.log("Coding Challenge #1");
+
+        //Data 1
+        const MarkWeight = 78;
+        const MarkHeight = 1.69;
+        const JonhWeight = 92;
+        const JonhHeight = 1.95;
+
+        //Data 2
+        const MarkWeight1 =95;
+        const MarkHeight1 = 1.88;
+        const JonhWeight1 = 85;
+        const JonhHeight1 = 1.76;
+
+
+        const MarkBMI = calculateBMI(MarkWeight, MarkHeight);
+        const JonhBMI = calculateBMI(JonhWeight, JonhHeight);
+        const MarkBMI1 =calculateBMI(MarkWeight1, MarkHeight1);
+        const JonhBMI1 = calculateBMI(JonhWeight1, JonhHeight1);
+
+        function calculateBMI(weight, height) {
+        return weight / (height ** 2);
+        }
+        console.log("Data 1:")
+        console.log("BMI of Mark:",MarkBMI);
+        console.log("BMI of Jonh:",JonhBMI);
+        const MarkBMIhigher = MarkBMI > JonhBMI;
+        const mess = "MarkBMI is higher than JohnBMI";
+        console.log(MarkBMIhigher);
+        console.log(mess);
+
+
+        console.log("Data 2:")
+        console.log("BMI of Mark:",MarkBMI1);
+        console.log("BMI of Jonh:",JonhBMI1);
+        const MarkBMIhigher1 = MarkBMI < JonhBMI;
+        const mess1 = "JohnBMI is higher than MarkBMI";
+        console.log(MarkBMIhigher1);
+        console.log(mess1);
+
+        
+       console.log('\n  Coding Challenge #2');
+
+        if (MarkBMI > JonhBMI) {
+            console.log("BMI of Mark "+MarkBMI+"  is higher than John " +JonhBMI);}
+        else{
+            console.log("BMI of John "+JonhBMI+" is higher than Mark" +"MarkBMI");
+        }
+       
+
+        console.log('\n  Coding Challenge #3');
+         //Data1
+         const dolphins0=[96,108,89];
+        const koalas0=[88,91,110];
+
+        //Data Bonus 1
+        const dolphins1=[97,112,101];
+        const koalas1=[109,95,123];
+
+        //Data Bonus 2
+        const dolphins2=[97,112,101];
+        const koalas2=[109,95,106];
+
+        function avg(scores) {
+        const sum = scores.reduce((total, score) => total + score, 0);
+        return sum / scores.length;
+        }
+
+
+        function cWinner(dolphins, koalas) {
+        const dolphinsAvg = avg(dolphins);
+        const koalasAvg = avg(koalas);
+        
+
+        if (dolphinsAvg >= 100 &&  dolphinsAvg > koalasAvg) {
+            return "Dolphins is win!";
+        } else if (koalasAvg  >= 100 && koalasAvg >  dolphinsAvg) {
+            return "Koalas is win!";
+        } else if ( dolphinsAvg === koalasAvg  &&  dolphinsAvg >= 100 && koalasAvg  >= 100) {
+            return "It's a draw!";
+        } else {
+            return "No team wins the trophy.";
+        }
+        }
+        // Data 1
+        console.log("Data 1:", cWinner(dolphins0, koalas0));
+        // Data Bonus 1
+        console.log("Data Bonus 1:", cWinner(dolphins1, koalas1));
+        // Data Bonus 2
+        console.log("Data Bonus 2:", cWinner(dolphins2, koalas2));
+        
+    
+       
+    </script>
+</body>
+
+</html>
