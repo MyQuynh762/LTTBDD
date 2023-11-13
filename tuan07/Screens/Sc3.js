@@ -14,7 +14,7 @@ export default function SC3({ navigation }) {
             </View>
             <View style={styles.v2}>
             <Image style={styles.heart} source={require("../assets/tim.jpg")}></Image>
-            <Pressable style={styles.btn}  onPress={() => navigation.goBack()}>
+            <Pressable style={styles.btn}  onPress={() => navigation.navigate("screen4")}>
             <Text style={styles.text3}>ADD TO CARD </Text> </Pressable>
             </View>   
         

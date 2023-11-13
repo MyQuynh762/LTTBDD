@@ -25,8 +25,6 @@ return (
   
     <View style={styles.v1}>
  
-
-    
     <Image source={require("./assets/avatar.png")} style={styles.img}></Image>
      <TextInput
        style={styles.input}
